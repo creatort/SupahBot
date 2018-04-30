@@ -11,20 +11,8 @@ var commands = {
     execute: getVideo,
     description: 'get a youtube video by search word'
   },
-  '!weather': {
-    execute: getWeather,
-    description: 'get current weather for the given city, defaults to Stockholm'
-  },
-  '!roll': {
-    execute: roll,
-    description: 'roll from 1-100'
-  },
   '!help': {
     execute: showHelp
-  },
-  '!words': {
-    execute: countWordsByUser,
-    description: 'get the most popular words for user of the given username, defaults to your username'
   },
   '!queue': {
     execute: doQueue,
