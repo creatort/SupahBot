@@ -11,21 +11,12 @@ var commands = {
     execute: getVideo,
     description: 'get a youtube video by search word'
   },
-  '/weather': {
-    execute: getWeather,
-    description: 'get current weather for the given city, defaults to Stockholm'
-  },
-  '/roll': {
-    execute: roll,
-    description: 'roll from 1-100'
-  },
+ 
+ 
   '/help': {
     execute: showHelp
   },
-  '/words': {
-    execute: countWordsByUser,
-    description: 'get the most popular words for user of the given username, defaults to your username'
-  },
+ 
   '/queue': {
     execute: doQueue,
     description: 'queue your song'
@@ -102,7 +93,7 @@ function showHelp(args, message) {
   if (Object.keys(commands).length > 1) {
     var toReturn = 'Available commands:\n';
     for (var command in commands) {
-      if (command != '!help') {
+      if (command /= '/help') {
         data = commands[command];
         toReturn += command + ': ' + data.description + getAvailableCommandAsText(data) + '\n';
       }
